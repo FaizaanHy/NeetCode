@@ -7,3 +7,11 @@ class Solution:
             else:
                 unique.add(num)
         return False
+""""
+We start by initializing an empty set called unique, which allows O(1) lookup time because sets use hashing. 
+Then, we iterate through each element in the list nums, referring to each element as num. 
+For every num, we check if it already exists in our unique set: 
+    If it does, that means we’ve found a duplicate, so we immediately return True. 
+    If it doesn’t, we add num to the unique set and continue. 
+    If we finish iterating through the entire list without finding any duplicates, we return False.
+"""
