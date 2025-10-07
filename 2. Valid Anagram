@@ -1,0 +1,27 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        countS, countT = {}, {}
+        for i in s:
+            if i in countS:
+                countS[i] += 1
+            else:
+                countS[i] = 1
+        for i in t:
+            if i in countT:
+                countT[i] += 1
+            else:
+                countT[i] = 1
+        return(countS == countT)
+
+We first check if the length of each string is the same, because if not, there's no way it can be an anagram
+Initialize 2 empty dictionaries that will store the letters of s and t.
+We run a for loop iterating over each letter in s
+  We increase the counter by 1 for the letter if we have already seen it,
+  But if we haven't, then we will set it equal to 1
+Do the same for t
+At the end, check whether the 2 dictionaries have the same value
+  If the same values
+  We return true
+  Otherwise, we return false
